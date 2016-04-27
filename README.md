@@ -9,4 +9,4 @@ This plugin was built using Advanced Custom Fields Pro. The code could be modifi
 WordPress REST API (Version 2) and ACF to REST API (Version 2) were also used to check answers via AJAX.
 
 ## CSS Styles
-Some of the CSS was borrowed from Atakan Goktepe's "Multi Step Form" [demo on Codepen](http://codepen.io/atakan/pen/gqbIz).
+Some of the CSS was borrowed from Atakan Goktepe's ["Multi Step Form" demo](http://codepen.io/atakan/pen/gqbIz) and Angela Velasquez's ["CSS Styling Radio Button" demo](http://codepen.io/AngelaVelasquez/pen/Eypnq) on Codepen.
