@@ -5,7 +5,9 @@ jQuery(document).ready(function($) {
 	var totalCorrect = 0;
 	var finalScore = 0;
 
-	//jQuery time
+	// Form progression animation
+	// Adapted from Atakan Goktepe's "Multi Step Form" demo
+	// http://codepen.io/atakan/pen/gqbIz
 	var current_fs, next_fs, previous_fs; //fieldsets
 	var left, opacity, scale; //fieldset properties which we will animate
 	var animating; //flag to prevent quick multi-click glitches
@@ -87,13 +89,14 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-	// Click Action
+	// Click Action for each question in quiz
 
 	$("#msform").change(function () {
 
+		// quiz JSON object to check selection against
 		var dataSource = 'http://variano.site/wp-json/wp/v2/quiz/16';
 
-		// Loading, Incorrect and Correct Alert Boxes as variables
+		// Incorrect and Correct Alert Boxes as variables
 		var wrongAnswer = '<div class="alert alert-danger"><strong>Bummer!</strong> That\'s Incorrect.</div>';
 		var rightAnswer = '';
 		var answerExplain = '';
@@ -112,7 +115,7 @@ jQuery(document).ready(function($) {
 				if(this.answer == pickedAnswer && this.is_correct == "Correct") {
 					// Indicate that answer is correct.
 					correct = true;
-					// Increment score and set up final score.
+					// Increment score and update final score on last panel.
 					totalCorrect++;
 					finalScore = (totalCorrect / totalQuestions) * 100;
 					finalScore = Math.floor(finalScore);
@@ -121,6 +124,9 @@ jQuery(document).ready(function($) {
 					rightAnswer += this.answer_message;
 					rightAnswer += '</div>';
 				} else {
+					// Just update final score on last panel.
+					// Will eventually refactor this as a function
+					// we can call on
 					finalScore = (totalCorrect / totalQuestions) * 100;
 					finalScore = Math.floor(finalScore);
 					$(".final-score").html('You Scored ' + finalScore + '%');
