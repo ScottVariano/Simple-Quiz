@@ -14,8 +14,8 @@ Text Domain: variano-quiz
 
 body,html {
 	width: 100%;
-	height: 100%;
-	overflow: hidden;
+	min-height: 100%;
+	overflow-x: hidden;
 }
 
 html {
@@ -323,3 +323,4 @@ input[type=radio]:checked ~ label {
 		margin-top: 49px;
 	}
 }
+
