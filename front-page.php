@@ -9,7 +9,7 @@
         'post_type' => 'quiz'
       );
       $the_query = new WP_Query( $args ); ?>
-      <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+      <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
       <?php
       // Begin building progress bar that sits above the questions
@@ -17,7 +17,7 @@
 
       $progBar = '<ul id="progressbar">';
       $progBar .= '<li class="active"></li>';
-      $fieldsets .= '<fieldset>';
+      $fieldsets = '<fieldset>';
       $fieldsets .= '<p><img src="' . get_field('quiz_image') . '" /></p>';
       $fieldsets .= get_field('quiz_intro');
       $fieldsets .= '<input type="button" name="next" class="next action-button prog-' . $panelCount . '" value="Start the Quiz &raquo;" />';
