@@ -4,7 +4,7 @@ A very simple, self-contained quiz theme for WordPress that lets you build small
 [View the Demo](http://scottv.biz/quiz)
 
 ## Plugins Used
-This plugin was built using Advanced Custom Fields Pro. The code could be modified to be used with the standard version, but would just be a bit less flexible when setting up quizzes (due to lack of build-in repeater fields).
+This plugin was built using Advanced Custom Fields Pro. The code could be modified to be used with the standard version, but would just be a bit less flexible when setting up quizzes (due to lack of built-in repeater fields).
 
 WordPress REST API (Version 2) and ACF to REST API (Version 2) were also used to check answers via AJAX.
 
